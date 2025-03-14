@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  background-color: #222222;
+}
+
+nav {
+  /* margin-top: -50px; */
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+}
+
+nav .nav-link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-link-wrapper li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav .nav-link-wrapper li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav .nav-link-wrapper li a:hover {
+  color: blue;
+}
+
+.nav-link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-link-wrapper li a {
+  padding: 5px 20px 10px;
+  border-radius: 5px;
+  /* background: #222222; */
+  margin-left: 5px;
+}
+
+nav .logo {
+  color: #fff;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.menu_button i {
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.overall_wrapper {
+  padding: 20px;
+  /* max-width: 1200px */
+  margin: auto;
+  overflow: hidden;
+  background-image: url("https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1506&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .mainSection {
+  margin-bottom: 50px;
+} */
+
+.mainSection .overall_wrapper .pictureSection {
+  width: 400px;
+  padding-top: 100px;
+  margin: auto;
+}
+
+.mainSection .pictureSection img {
+  width: 100%;
+  /* border-radius: 50%; */
+}
+
+.overall_wrapper .paragraph_brief {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+  animation-name: slidein;
+  animation-duration: 3s;
+}
+
+@keyframes slidein {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+.overall_wrapper .SVG-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.overall_wrapper .SVG-container svg {
+  width: 40px;
+  height: 40px;
+  color: aqua;
+}
+
+.overall_wrapper .SVG-container svg:hover {
+  color: #fff;
+}
+
+.section h2 {
+  color: aqua;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.project-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* for making the cards wrapped in 3s */
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 2rem;
+  margin-bottom: 20px;
+}
+
+.project-card {
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.project-card:hover {
+  /* transform: scale(1.1); */
+  transition: 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+}
+
+.card-content {
+  width: 300px;
+  margin-left: 25px;
+  padding: 10px;
+}
+
+.project-title {
+  color: aqua;
+  margin-bottom: 10px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.project-brief {
+  font-size: 14px;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #fff;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.project-links svg {
+  width: 20px;
+  height: 20px;
+  fill: aqua;
+}
+
+footer {
+  margin-top: 200px;
+}
+
+footer p {
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  nav .menu_button i {
+    display: block;
+  }
+
+  nav .logo {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  nav .nav-link-wrapper {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #222222;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0, 3s ease;
+  }
+
+  #click:checked ~ .nav-link-wrapper {
+    left: 0%;
+  }
+
+  nav .nav-link-wrapper li {
+    margin: 40px 0;
+  }
+
+  nav .nav-link-wrapper li a {
+    font-size: 20px;
+    display: block;
+  }
+
+  .overall_wrapper {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    background-image: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .mainSection .overall_wrapper .pictureSection {
+    width: 200px;
+    padding-top: 100px;
+    margin: auto;
+  }
+}

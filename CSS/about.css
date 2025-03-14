@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  background-color: #222222;
+}
+
+nav {
+  /* margin-top: -50px; */
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+}
+
+nav .nav-link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-link-wrapper li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav .nav-link-wrapper li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.nav-link-wrapper li a:hover {
+  color: blue;
+}
+
+.nav-link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-wrapper .navlink {
+  padding: 5px 20px 10px;
+  border-radius: 5px;
+  /* background: #222222; */
+  margin-left: 5px;
+}
+
+nav .logo {
+  color: #fff;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu_button i{
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+  display: none;
+}
+
+
+
+#click {
+  display: none;
+}
+
+.forThecontent {
+  padding: 100px;
+  width: 80%;
+  margin: auto;
+}
+
+.forThecontent .aboutMeparagraphHeading {
+  color: aqua;
+  font-size: 40px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.forThecontent .aboutMeparagraph {
+  line-height: 2;
+  text-align: justify;
+  color: #ffffff;
+}
+
+.myPoint {
+  display: flex;
+  justify-content: space-around;
+}
+
+.forEachPoint {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.forEachPoint .checkmark svg {
+  width: 30px;
+  height: 30px;
+  fill: aqua;
+}
+
+.sKills_section {
+  padding: 20px;
+}
+
+.sKills_section h2{
+  text-align: center;
+  color: aqua;
+  margin-bottom: 25px;
+}
+
+.stack-group{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.stack-progress-wrapper label{
+  color: #fff;
+}
+
+
+/* FOR CHROME */
+.stack-progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 100px;
+}
+
+.stack-progress::-webkit-progress-value {
+  background-color: #f9320a;
+  border-radius: 100px;
+}
+
+/* FOR FIREFOX */
+.stack-progress::-moz-progress-bar {
+  background-color: #eee;
+  border-radius: 100px;
+}
+
+/* FOR INTERNET EXPLORER */
+
+.stack-progress {
+  color: #f9320a;
+  border-radius: 100px;
+}
+
+.stack-progress-wrapper label {
+  display: block;
+}
+
+
+.gridSection {
+  width: 1200px;
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 40px;
+}
+
+.gridSection .box {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  break-inside: avoid;
+}
+
+.gridSection .box img {
+  max-width: 100%;
+}
+
+footer {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+footer svg {
+  width: 40px;
+  height: 30px;
+  color: aqua;
+}
+
+footer svg:hover {
+  color: #fff;
+}
+
+
+@media (max-width: 800px) {
+  .forThecontent .aboutMeparagraphHeading {
+    color: aqua;
+    font-size: 40px;
+    margin-top: 55px;
+    text-align: center;
+  }
+
+  nav .menu_button i{
+    display: block;
+  }
+
+  nav .logo {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  nav .nav-link-wrapper{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #222222;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0,3s ease;
+  }
+
+  #click:checked ~ .nav-link-wrapper{
+    left: 0%;
+  }
+
+  nav .nav-link-wrapper li{
+    margin: 40px 0;
+  }
+
+  nav .nav-link-wrapper li a{
+    font-size: 20px;
+    display: block;
+  }
+
+  .forThecontent {
+    width: 100%;
+    padding: 20px;
+  }
+  .whyWorkwithMe .aboutMeparagraphHeading {
+    font-size: 28px;
+  }
+
+  .myPoint {
+    display: block;
+  }
+
+  .stack-group{
+    display: inline-block;
+    /* gap: 10px; */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+
+  nav .menu_button i{
+    display: block;
+  }
+
+  nav .logo {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  nav .nav-link-wrapper{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #222222;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0,3s ease;
+  }
+
+  #click:checked ~ .nav-link-wrapper{
+    left: 0%;
+  }
+
+  nav .nav-link-wrapper li{
+    margin: 40px 0;
+  }
+
+  nav .nav-link-wrapper li a{
+    font-size: 20px;
+    display: block;
+  }
+
+  .forThecontent {
+    width: 100%;
+    padding: 20px;
+  }
+  .whyWorkwithMe .aboutMeparagraphHeading {
+    font-size: 28px;
+  }
+
+  .myPoint {
+    display: block;
+  }
+
+  .stack-group{
+    display: inline-block;
+    /* gap: 10px; */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .gridSection {
+    columns: 3;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    padding: 20px 20px 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gridSection {
+    columns: 1;
+  }
+}
